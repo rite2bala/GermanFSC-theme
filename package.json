@@ -1,0 +1,19 @@
+{
+  "name": "csc-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": " ",
+  "scripts": {
+    "build-dossier": "node ./bin/build_dossier.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/PharmaLedger-IMI/csc-theme.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PharmaLedger-IMI/csc-theme/issues"
+  },
+  "homepage": "https://github.com/PharmaLedger-IMI/csc-theme/#readme"
+}

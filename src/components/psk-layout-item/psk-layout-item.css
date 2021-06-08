@@ -1,0 +1,35 @@
+:host {
+    align-self: center;
+}
+
+h5 {
+    font-size: 1.25rem;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.productItem_echo_manufName {
+    background: antiquewhite;
+}
+
+:host(.horizontal-aligned) {
+    display: grid;
+}
+
+.small-text {
+    font-size: 12px !important;
+    font-weight: bold !important;
+}
+
+:host(.horizontal-aligned) .small-text {
+    font-size: 8px;
+}
+
+.horizontal-aligned .small-text {
+    font-size: 8px;
+}
+
+.row {
+    display: flex;
+}
