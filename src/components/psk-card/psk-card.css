@@ -1,278 +1,510 @@
-.card.psk-card, .image_container, .psk-description {
+/* clean old style inherited from bootstrap */
+
+psk-card,
+.card.psk-card,
+.card.psk-card .card-header {
+    font-family: nunito;
     background: none;
+    display: block;
     border: none;
-    padding: 10px 0px 10px;
 }
 
-.card.psk-card .psk-description {
+.card-header {
+    background: #e9e8e8;
+}
+
+.card-body {
+    padding: 2rem 4rem;
+}
+
+psk-page div.card-body {
     padding: 0;
 }
 
-.card.psk-card {
+.card-header h5 {
+    width: 100%;
+    color: #5076b3;
+    font-weight: bold;
+    padding-left: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    line-height: 2.8rem;
+}
+
+
+/** first level of psk-card */
+
+.psk-card .card-header {
+    font-size: 130%;
+}
+
+
+/** second level of psk-card */
+
+.psk-card .psk-card .card-header {
+    font-size: 120%;
+}
+
+
+/** more than two levels of psk-card*/
+
+.psk-card .psk-card .psk-card .card-header {
+    font-size: 110%;
+}
+
+@media (max-width: 991px) {
+    .card-body {
+        padding: 2rem 2rem;
+    }
+}
+
+
+/** receive dossier **/
+
+.receive-dossier,
+.receive-dossier div.card.psk-card,
+.share-dossier,
+.share-dossier div.card.psk-card {
+    width: 100%;
+}
+
+.receive-dossier>div.card>div.card-body,
+.share-dossier>div.card>div.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 auto;
+    border: 0.1rem solid #b6cbee;
+    border-radius: 10px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #808080;
+}
+
+.share-qr {
+    width: 150px;
+    background: #fff;
+}
+
+.share-dossier div.image_container {
+    margin: 0;
+}
+
+@media screen and (max-width: 991px) {
+    .receive-dossier div.card-body,
+    .share-dossier div.card-body {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+
+/** move modal **/
+
+.move-modal psk-card,
+.move-modal .card,
+.move-modal .card-body,
+.move-modal psk-button,
+.move-modal button.btn.btn-primary,
+.move-modal psk-grid,
+.move-modal .row {
+    display: flex !important;
+    width: 100%;
+}
+
+.move-modal .wallet-header {
+    padding: 0.375rem 0.75rem;
+}
+
+.move-modal .wallet-header span.icon {
+    padding: 0.5rem;
+}
+
+.move-modal .wallet-container {
+    height: 30vh;
+    overflow: auto;
+}
+
+.move-modal .modal-buttons psk-button {
+    width: auto;
+}
+
+.move-modal .items div.row psk-label {
+    text-align: left;
+    justify-content: flex-start;
+}
+
+psk-card.item-identifier {
+    border-bottom: 1px solid #BBBB;
+}
+
+psk-card.item-identifier .card {
+    background: transparent;
+}
+
+psk-card.item-identifier .card .card-body {
+    padding-left: 5px;
+}
+
+psk-card.item-identifier .card .card-body psk-icon span {
+    font-size: 1.25rem;
+}
+
+psk-card.item-identifier psk-label label {
+    color: #777;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.submit-app-card {
+    display: block;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    max-width: 900px;
+}
+
+#qrCodeModal psk-barcode-scanner {
+    margin-left: 200px;
+}
+
+#shareQrCodeModal psk-barcode-generator .code_canvas {
+    height: 200px;
+}
+
+.bpd-sub-header {
+    margin: 35px 50px;
+    box-shadow: 0px 0px 13px -2px rgba(0,0,0,0.75);
+    border-radius: 8px;
+    padding: 20px 25px 20px 25px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.bpd-sub-header .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bpd-dashboard {
+    margin: 50px;
+    box-shadow: 0px 0px 13px -2px rgba(0,0,0,0.75);
+    border-radius: 8px;
+    padding: 20px 25px 60px 25px;
+}
+
+.bpd-dashboard img {
+    width: 100%;
+    margin-top: 30px;
+}
+.bpd-dashboard .image_container {
+     margin-bottom: 0;
+}
+
+.bpd-dashboard-title {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.bpd-tabs .bpd-dashboard-title .col-form-label {
+    width: 100%;
+}
+
+.bpd-header {
+    height: 80px;
+    box-shadow: 0px 6px 30px -9px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: flex-end;
+    padding: 25px 50px;
+    font-size: 18px;
+    color: slategray;
+    font-weight: 400;
+}
+
+.bpd-low-header {
+    height: 30px !important;
+}
+
+.bpd-create-organization {
+    margin: 20px 0;
+}
+
+.bpd-create-organization-button {
+
+}
+
+.bpd-create-organization-button psk-label {
+    font-size: 15px;
+}
+
+.bpd-organization-elements psk-for-each {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bpd-buttons-row {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.bpd-buttons-row > * {
+    margin-right: 20px;
+}
+
+.bpd-organization-card {
+    display: block;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.bpd-organization-box,
+.bpd-organization-line
+{
+    background-color: #007bff;
     border-radius: 10px;
 }
 
-.psk-card p {
-    margin: 0;
-    padding: 0.5rem 0;
+.bpd-organization-box,
+.bpd-buttons-row .bpd-organization-card .bpd-organization-card-content {
+    width: 180px;
+    height: 120px;
 }
 
-.psk-card p, .psk-card li, .psk-card .card-body {
-    text-align: justify;
+.bpd-buttons-row.bpd-wide-cards .bpd-organization-card .bpd-organization-card-content {
+    width: 320px;
+    height: 120px;
 }
 
-.card.psk-card .card.psk-card {
-    padding: 0.5rem 0;
-}
-
-/** first level*/
-
-.psk-card {
-    background-color: #FFFFFF !important;
-    border: 2px solid #FFFFFF !important;
-    padding: 0.5rem 0.5rem;
-    margin: 1rem 1.5rem !important;
-}
-
-.psk-card .card-header {
-    background: none;
-    border-bottom: none;
-    padding: 0.5rem 0px;
-}
-
-.psk-card h1 {
-    color: #354F9B;
-    font-size: 1.424rem;
-    font-weight: bold;
-}
-
-/** second level*/
-
-.psk-card .psk-card .card-header {
-    padding: 0.5rem 0 0;
-}
-
-.psk-card .psk-card .card-header h5 {
-    color: #565656;
-    font-weight: 600;
-}
-
-.psk-card .card-body {
-    border-radius: 10px !important;
-
-}
-
-.psk-card .my-actions-card {
+.bpd-buttons-row.bpd-wide-cards {
     display: flex;
-    padding: 0px !important;
-    margin-left: 40px;
+    justify-content: space-evenly;
 }
 
-.psk-card .timeline {
-    padding: 0px 0px !important;
-    margin-left: 40px;
-    border-radius: 25px !important;
+.bpd-organization-line {
+    width: 2500px;
+    height: 37px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 0px 20px;
+    color: white;
+    display: flex;
 }
 
-.sponsor {
-    color: #002855;
+.bpd-organization-line .psk-card,
+.bpd-organization-line .card-body
+{
+    width: 100% !important;
 }
 
-.cmo {
-    color: #312244;
+.bpd-organization-card-header {
+    position: absolute;
+    right: 5px;
 }
 
-.courier {
-    color: #006466;
+.bpd-organization-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
 }
 
-.clinic {
-    color: #03045E;
+.bpd-organization-card-content psk-icon {
+    font-size: 60px;
 }
 
-.psk-card .title {
-    margin: 0px 12px 0px 0px;
+.bpd-organization-card psk-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bpd-row .card-body {
+    display: block;
     padding: 0;
 }
 
-.psk-card .text {
-    margin: 0px 12px 0px 0px;
-    padding: 0;
+.bpd-input-row .card-body {
+    display: flex;
+    justify-content: space-between;
 }
 
-.psk-card .value {
-    margin: 0px 12px 0px 12px;
-    padding: 0;
-    color: #A2A2A2;
+.bpd-row .card-body psk-text-input {
+    margin-right: 10px;
 }
 
-.psk-card .form-group {
-    margin-bottom: 0.5rem;
+.bpd-row .card-body .form-control {
+    width: 200px;
 }
 
-.psk-card .card-body div {
-    padding-top: 0.5rem;
+.bpd-row .card-body .bpd-question-title .form-control {
+    width: 600px;
 }
 
-.psk-card p.subtitle {
-    color: #008A64;
-    padding-top: 0;
+.bpd-row .card-body .bpd-seed .form-control {
+    width: 340px;
 }
 
-.api-title .psk-card h5 {
-    /* Used max-content value to have backgroud-color only for content, not for entire occupied space */
-    width: max-content;
-    background-color: #dfe5f9;
-    padding: 5px;
+.bpd-input-row .card-body .form-control {
+    width: 315px;
 }
 
-.api-subtitle .psk-card .card-header h5 {
-    background-color: initial;
-    font-size: 1rem;
-    padding: 0 5px 0 0;
-    font-weight: 600;
-    border: 1px solid #cfd9f6;
-}
-
-.api-subtitle .psk-card .card-header h5::before {
-    content: '...';
-    background-color: #cfd9f6;
-    color: #cfd9f6;
-    margin-right: 3px;
-}
-
-/* code tag */
-
-.psk-card .card-body p code, .psk-card .card-body ul code, .psk-card .card-body .psk-description code {
-    color: #008A64;
-    font-size: 100%;
-    padding: 0 3px;
-}
-
-/* list style */
-
-.psk-card ul, .psk-card ol {
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
+.bpd-row .card-body .form-group {
     margin: 0;
 }
 
-.psk-card ul ul {
-    list-style: none;
+.bpd-translucent-buttons psk-button {
+    display: block;
 }
 
-.psk-card ul ul li::before {
-    content: "-";
-    font-weight: 600;
+.bpd-translucent-buttons psk-button button {
+    color: #007bff;
+    background-color: white;
+    border-color: white;
+    width: 225px;
+    margin-bottom: 20px;
 }
 
-.psk-card ol {
-    counter-reset: li;
-    list-style-type: none;
+.bpd-translucent-buttons .card-body {
+    padding: 0;
+    margin-top: 50px;
 }
 
-ol > li::before {
-    content: counter(li) ". ";
-    counter-increment: li;
-    color: #4C71DE;
-    font-weight: bold;
-    width: 1rem;
-    margin-left: -1.5rem;
-    margin-right: 0.5rem;
-    text-align: right;
-    direction: rtl;
+.bpd-row .bpd-for-each-row {
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.psk-card li {
-    padding: 0.5rem 0 0;
+.bpd-row .bpd-for-each-row.bpd-kconfig-row {
+    margin-bottom: 5px;
 }
 
-.psk-card li li {
-    padding: 0px;
+.bpd-flex .card-body{
+    display: flex;
 }
 
-/* page not-available */
-
-.psk-card#not-available .card-header h5 {
-    font-size: 1.802rem;
-    color: #F44336;
-    font-weight: bold;
-    text-align: center;
+.bpd-margin-north-south button {
+    margin: 10px 0;
 }
 
-.psk-card#not-available .card-body {
-    font-size: 1.266rem;
-    text-align: center;
+.bpd-margin-left.bpd-flex .card-body {
+    margin-left: 200px;
 }
 
-.psk-card#not-available {
+.bpd-seed input {
+    margin-bottom: 5px;
+}
+
+.bpd-row .bpd-for-each-row psk-for-each {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.bpd-row .bpd-for-each-row > psk-button {
+    margin-right: 10px;
+}
+
+.bpd-row .bpd-for-each-row psk-radio-group .form-group > psk-label{
+    display: none;
+}
+
+.bpd-row .bpd-for-each-row psk-condition {
+    margin-bottom: 20px;
+}
+
+.bpd-row psk-for-each {
+    display: block;
+}
+
+.bpd-for-each-row .bpd-answer-button {
+    margin: 0 10px 10px 0;
+}
+
+.bpd-for-each-row .bpd-answer-button button.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: #54a7ff !important;
+    border-color: #54a7ff !important;
+}
+
+.bpd-for-each-row .bpd-answer-button button {
+
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+}
+
+.bpd-for-each-row .bpd-answer-button psk-label{
+    color: white !important;
+}
+
+.bpd-creation-row .bpd-delete-button button {
+    color: red;
+    background-color: white;
+    border-color: red;
+}
+
+.bpd-creation-row .bpd-delete-button button:hover {
+    color: white;
+    background-color: red;
+    border-color: red;
+}
+
+.bpd-creation-row psk-button button {
+    width: 225px;
+}
+
+.bpd-creation-row psk-button.bpd-qr-code-with-text button {
+    color: #007bff;
+    background: white;
+    border: 0;
+}
+
+.bpd-creation-row psk-button.bpd-qr-code-with-text button div{
+    display: flex;
+    align-items: center;
+}
+
+.bpd-creation-row psk-button.bpd-qr-code-with-text button psk-icon{
+    font-size: 40px;
+    margin-right: 15px;
+}
+
+.bpd-creation-row psk-button.bpd-qr-code-with-text button:hover {
+}
+
+.bpd-creation-row {
+    margin-top: 20px;
+}
+
+.bpd-progress {
+}
+
+progress, progress[role] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-size: auto;
+    height: 20px;
+}
+
+.skill .card-body {
+    margin-bottom: 1em;
     position: relative;
-    background-image: url(../../../../assets/images/404.png);
-    background-repeat: no-repeat;
-    background-size: 200px;
-    background-position: top;
-    padding-top: 130px;
-    margin-top: 5rem;
 }
 
-.card.psk-card, .image_container, .psk-description {
-    padding: 0 !important;
+.skill .card-body psk-label label {
+    left: 1em;
+    line-height: 1;
+    position: absolute;
+    top: 1em;
 }
 
-/** first level*/
-.psk-card .card-header {
-    padding: 5px 0px;
-}
-
-.psk-card .card-header h5 {
-    font-size: 1.125rem;
-}
-
-.psk-card h1 {
-    font-size: 1.3125rem;
-}
-
-/** second level*/
-.psk-card .psk-card .card-header h5 {
-    font-size: 0.875rem;
-    font-weight: bold;
-}
-
-.psk-card .card-body {
-    padding: 20px 0px;
-    font-size: 0.875rem;
-}
-
-.psk-card .card-body div {
-    padding-top: 0.5rem;
-}
-
-.psk-card#not-available .card-header h5 {
-    font-size: 1.266rem;
-}
-
-.psk-card#not-available .card-body {
-    font-size: 1rem;
-}
-
-/* page: Cardinal/cheatsheet */
-
-.cheatsheet-item {
-    margin-bottom: 1.5em;
-}
-
-.cheatsheet-item .card.psk-card,
-.cheatsheet-item .card.psk-card .card-header,
-.cheatsheet-item .card.psk-card .card-body ul {
-    padding: 0;
-    margin: 0;
-}
-
-.cheatsheet-item .card.psk-card .card-header h5 {
-    padding: 0.25em 0;
-    border-bottom: 3px solid #5E7FE1;
-}
-
-.cheatsheet-item .card.psk-card .card-body ul {
-    list-style-position: inside;
+::-webkit-progress-value {
+    -webkit-animation: bar-fill 2s;
+    width: 0;
 }

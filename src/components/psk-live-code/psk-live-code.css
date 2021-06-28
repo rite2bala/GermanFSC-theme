@@ -1,21 +1,31 @@
-@import url(/themes/clear-sky-theme/components/psk-code/psk-code.css);
+@import url(/themes/blue-fluorite-theme/components/psk-code/psk-code.css);
+
+div.live-editor-container{
+    width:100%;
+}
+
 div.prism-live {
     display: flex;
     position: relative;
     box-sizing: border-box;
     flex-flow: column;
-    height: 30vh;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.asset-modal[expanded='true'] div.prism-live {
+    max-height: 60vh;
 }
 
 textarea.prism-live {
+    margin-left: 10px;
+    padding: 20px;
     position: absolute;
-    padding-left: 30px;
-    padding-bottom: 0;
-    margin-bottom: 1em;
     top: 0;
     left: 0;
     height: 100%;
-    width: 100%;
+    box-sizing: border-box;
+    width: -webkit-fill-available;
     z-index: 1000;
     color: transparent;
     cursor: text;
@@ -62,7 +72,13 @@ pre.prism-live {
     position: relative;
     pointer-events: none;
     overflow: hidden;
-    margin: 0;
+    max-height: 100%;
+    background-color: #fdfdfd;
+}
+
+pre[class*="language-"]>code {
+    background-image: none;
+    box-shadow: none;
 }
 
 pre.prism-live>code:empty::before {

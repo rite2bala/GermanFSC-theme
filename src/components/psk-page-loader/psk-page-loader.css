@@ -1,8 +1,16 @@
-psk-page.no-title .container,
-psk-page.no-title .content{
-    height: 100%;
+psk-page-loader {
+    padding: 0!important;
 }
 
-psk-page.no-title{
-    overflow: hidden;
+.page_content{
+    height:100%;
+}
+
+
+.access-marketplace-page,
+.main-container,
+.page-content,
+.container,
+.container-content {
+    height: 100%;
 }

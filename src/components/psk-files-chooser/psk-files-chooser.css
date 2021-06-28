@@ -3,21 +3,29 @@ input[type=file].form-control-sm {
     display: none;
 }
 
-.paperclip label:before {
-    content: "\f0c6";
-    font-family: 'FontAwesome';
-    margin-right: 10px;
-}
-
-.paperclip label{
-    margin-bottom: 0!important;
-}
-
-.inline{
-    display: inline-block;
-    margin-left: 30px;
-}
-
 label {
     cursor: pointer;
+}
+
+button.btn.btn-secondary,
+button.btn.btn-secondary:hover,
+button.btn.btn-secondary:focus,
+button.btn.btn-secondary:active,
+button.btn.btn-secondary:active:focus,
+button.btn.btn-secondary:not(:disabled):not(.disabled):active,
+button.btn.btn-secondary:not(:disabled):not(.disabled):active:focus {
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+psk-files-chooser .btn {
+    text-align: left;
+    padding: 0 0 0 0.25rem;
+    flex-direction: column;
+}
+
+.add-menu psk-files-chooser {
+    border: none;
 }

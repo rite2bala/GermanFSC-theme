@@ -1,8 +1,10 @@
+
+
 * {
     outline: none !important;
 }
 
- :host {
+:host {
     scroll-behavior: smooth;
 }
 
@@ -19,37 +21,32 @@ span a {
     font-weight: bold;
 }
 
- :host {
+:host {
     display: block;
     font-family: nunito;
 }
 
 div>.mark,
 div>.mark:visited {
-    color: lightgray;
+    color: #707070;
     background-color: transparent;
     position: absolute;
-    top: -1px;
+    top: 0px;
     right: 0px;
-    padding: 0 0.5rem;
-    font-size: 1.25rem;
+    padding: .5rem;
+    font-size: 150%;
 }
 
 div>.mark:hover,
 div>.mark:focus,
 div>.mark:active {
-    color: #4C71DE;
+    color: #43853d;
     background: none;
 }
 
 psk-chapter psk-chapter .mark {
+    visibility: hidden;
     opacity: 0;
-}
-psk-chapter psk-chapter .mark:hover{
-    opacity: 1;
-}
-psk-chapter psk-chapter .copy-tooltip {
-    top:-12px;
 }
 
 .tooltip_container {
@@ -58,25 +55,24 @@ psk-chapter psk-chapter .copy-tooltip {
     cursor: pointer;
     position: absolute;
     right: 0;
-    top:30;
 }
 
 .tooltip_container:hover .copy-tooltip {
     opacity: 1;
-    background-color: #5E7FE1;
+    background-color: #224abe;
 }
 
 .copy-tooltip {
+    margin-top: 10px;
     margin-right: 35px;
     padding: 6px 12px;
-    color: #fff;
+    color: rgba(255, 255, 255, .7);
     border-radius: 4px;
+    background: #224abe;
     display: block;
     opacity: 0;
-    font-size: 0.9rem;
+    font-size: 13px;
     position: relative;
-    font-weight: 600;
-    top:-4px;
 }
 
 .copy-tooltip.copied {
@@ -92,5 +88,5 @@ psk-chapter psk-chapter .copy-tooltip {
     border-width: 5px;
     margin-top: -5px;
     border-style: solid;
-    border-color: transparent transparent transparent #5E7FE1;
+    border-color: transparent transparent transparent #224abe;
 }

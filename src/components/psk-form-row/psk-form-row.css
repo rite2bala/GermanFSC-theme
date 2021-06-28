@@ -1,18 +1,16 @@
-.twoCharsCol {
-    display: grid;
-    grid-template-columns: 2ch auto;
-}
-#to {
-    display: grid;
-    grid-template-columns: 2ch;
+.submit-app-row psk-grid .row {
+    display: block;
+    margin: 0 30px;
 }
 
-.fiveCharsCol {
-    display: grid;
-    grid-template-columns: 5ch auto;
+.submit-app-row psk-text-input form-group {
+    margin: 0;
 }
-#twoRowsGrid{
+
+.submit-app-row psk-grid {
     display: grid;
-    grid-template-rows: 2ch;
-    padding-bottom: 30px;
+}
+
+.submit-app-row psk-grid > * {
+    margin-bottom: 10px;
 }
